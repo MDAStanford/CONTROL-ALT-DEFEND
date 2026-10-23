@@ -13,7 +13,7 @@ The seven-day aggregate falls within the stated normal range; that does not esta
 
 ## Interpretation
 
-The learner identified two concerning indicators:
+The assessment identified two concerning indicators:
 
 1. **Concentrated access volume:** 1,900 records were read in a four-minute interval.
 2. **Unexpected source IP:** The requests originated from an IP different from the agent's normal source.
@@ -26,7 +26,7 @@ Together, these observations raise concern about **possible unauthorized access 
 2. **Impact assessment — triage the records accessed.** Identify which patient information was accessed, its sensitivity, and the potential ramifications, including possible exposure of ePHI.
 3. **Investigation — preserve and review authentication evidence.** Preserve relevant NHI authentication and API logs; examine token usage, source environment, and related activity to distinguish credential compromise from an authorized operational event.
 
-The first two actions originate from the learner's assessment. The third and the token-specific containment refinement were suggested during review and included upon the learner's request to update the document.
+The first two actions originate from the initial assessment. The third and the token-specific containment refinement were suggested during review and included upon the learner's request to update the document.
 
 ## Status
 
