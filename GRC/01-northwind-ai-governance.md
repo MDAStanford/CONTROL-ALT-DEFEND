@@ -1,6 +1,6 @@
 # Northwind Health — AI Governance Risk Assessment
 
-**Exercise type:** Guided scenario-based GRC analysis
+**Exercise type:** Scenario-Based AI Governance Risk Assessment
 
 *Fictional Northwind Health cybersecurity challenge; not a production assessment.*  
 **Date:** October 23, 2026  
