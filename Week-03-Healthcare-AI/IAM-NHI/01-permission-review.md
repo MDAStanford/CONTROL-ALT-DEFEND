@@ -10,7 +10,7 @@ The AI agent answers clinic staff questions about appointment and billing status
 
 | # | Existing permission | Decision | Rationale |
 |---|---|---|---|
-| 1 | Read help-centre articles | **Needed** | Relevant help-centre documentation supports accurate answers to clinic staff questions. Access should be limited to material relevant to the agent's duties. |
+| 1 | Read help-center articles | **Needed** | Relevant help-center documentation supports accurate answers to clinic staff questions. Access should be limited to material relevant to the agent's duties. |
 | 2 | Read all patient records (full ePHI) | **Not needed** | Appointment and billing inquiries do not require unrestricted access to complete medical records. **Least privilege** and **data minimization** support limiting access to only necessary patient information. |
 | 3 | Read billing summaries | **Needed** | Reporting billing status is a core business function. Summaries can indicate whether an invoice is **open, paid, or pending** without exposing full payment records. |
 | 4 | Read full billing and payment data | **Not needed** | The agent reports billing status; it does not process payments. Full transaction and payment data exceed the stated business need. |
