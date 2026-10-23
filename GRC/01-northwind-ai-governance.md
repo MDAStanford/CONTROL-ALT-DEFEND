@@ -51,11 +51,3 @@ A vendor's claim that its model is unbiased is **not independent evidence** of f
 **Areas refined during guided review:** The HR screener was initially rated Medium but must be High under the supplied rubric because it makes hiring decisions. Approval conditions were made more precise, particularly human review before rejection and verification of vendor data handling.
 
 **Not claimed:** No production audit, regulatory determination, vendor assessment, bias test, or technical control implementation was performed in this exercise.
-
-## Interview defense prompts
-
-1. Why does a hiring decision make an AI system High risk even without evidence of bias?
-2. What evidence would prove masking works before logs are sent to a coding assistant?
-3. Why is a signed BAA insufficient by itself to authorize a clinical AI launch?
-4. What facts would you gather before concluding call recording violates applicable law?
-5. When would you change the chatbot's Low classification?
