@@ -51,6 +51,6 @@ Identity governance review of the AI support agent's **non-human identity (NHI)*
 | Inadequate identity lifecycle recordkeeping | HIGH |
 | Missing token expiration and credential lifecycle | HIGH |
 
-These findings address **NHI governance**, not the appropriateness of individual application permissions. They reflect the learner's observations and conclusions from the fictional challenge scenario.
+These findings address **NHI governance**, not the appropriateness of individual application permissions. They reflect the documented observations and conclusions from the fictional challenge scenario.
 
 *Training case study; not an assessment of a live environment. Scenario adapted and paraphrased from a cybersecurity learning challenge.*
