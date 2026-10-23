@@ -1,4 +1,4 @@
-# IAM Assessment — Part 3: Tuesday Access Anomaly (In Progress)
+# IAM Assessment — Part 3: Tuesday Access Anomaly
 
 ## Observed activity
 
@@ -11,7 +11,7 @@ On Tuesday, from **03:12 to 03:16**, the AI support agent's non-human identity (
 
 The seven-day aggregate falls within the stated normal range; that does not establish that this particular four-minute burst was expected or authorized.
 
-## Preliminary interpretation
+## Interpretation
 
 The learner identified two concerning indicators:
 
@@ -22,10 +22,14 @@ Together, these observations raise concern about **possible unauthorized access 
 
 ## First three response actions
 
-**Pending learner assessment.** No response actions have been selected or finalized yet.
+1. **Containment — block the suspicious source IP.** Block `198.51.100.77` to interrupt access from the observed source. Because an exposed API token could be reused from another address, coordinate containment of the NHI credential itself, including controlled token revocation or rotation as appropriate.
+2. **Impact assessment — triage the records accessed.** Identify which patient information was accessed, its sensitivity, and the potential ramifications, including possible exposure of ePHI.
+3. **Investigation — preserve and review authentication evidence.** Preserve relevant NHI authentication and API logs; examine token usage, source environment, and related activity to distinguish credential compromise from an authorized operational event.
+
+The first two actions originate from the learner's assessment. The third and the token-specific containment refinement were suggested during review and included upon the learner's request to update the document.
 
 ## Status
 
-**In progress:** The event description and preliminary interpretation are documented. The required first three actions remain open.
+**Part 3 documented:** Observations, suspected-incident interpretation, and three initial response actions recorded. Confirmation of compromise would require further investigation.
 
 *Fictional training case study, not a live security incident. Scenario adapted and paraphrased from a cybersecurity learning challenge.*
