@@ -32,4 +32,4 @@ The review distinguishes the AI agent's business function from the access grante
 
 **Part 1 complete — permission classifications.** Other challenge components (identity governance findings, activity review, and target-state controls) are not yet assessed.
 
-*This document records the learner's decisions and reasoning, with editorial organization and technical clarifications. It does not claim hands-on validation in a live system.*
+*This document presents an IAM permission review of a fictional scenario. It does not claim hands-on validation in a live system.*
