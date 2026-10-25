@@ -6,7 +6,7 @@ Weekly security scenario responses demonstrating Identity & Access Management (I
 
 | Week | IAM response | GRC response | Status |
 | --- | --- | --- | --- |
-| 01 — Northwind Health: AI agent / non-human identity | [IAM Response](Week-01/IAM-Response.md) | [GRC Response](Week-01/GRC-Response.md) | IAM case study linked; GRC draft pending |
+| 03 — Northwind Health: AI agent / non-human identity | [IAM Response](Week-03/IAM-Response.md) | [GRC Response](Week-03/GRC-Response.md) | IAM case study linked; GRC draft pending |
 
 ## Structure
 
