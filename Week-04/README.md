@@ -44,8 +44,9 @@ The design is **vendor-agnostic**. It uses Zero Trust, least privilege, separati
 
 ## DELIVERABLE 5 — Post-Call Incident Response
 
-An unsuccessful impersonation attempt still deserves documentation: the ticket creates an audit trail for future correlation. If several agents receive similar calls claiming to be Dana, treat the pattern as a potential **coordinated voice-phishing (vishing) campaign**, not automatically a distributed denial-of-service (DDoS) attack.
-
-Escalate to the security team; correlate help desk tickets with recovery attempts, sign-in activity, and account changes; warn relevant agents; and increase monitoring and recovery restrictions. Preserve Dana's legitimate access when safe to do so, supporting **business continuity** rather than automatically locking her account. Escalate to stronger containment if evidence of compromise appears.
-
-Because the target works in Finance, coordinate with authorized Finance/Fraud personnel to review relevant **corporate** card activity, payment approvals, and vendor banking changes for anomalies. Personal financial accounts are outside routine employer monitoring.
+- **Document the attempt:** Preserve an audit trail for future investigations.
+- **Identify patterns:** Repeated calls may indicate a coordinated vishing attack.
+- **Escalate and monitor:** Notify security, review sign-ins and recovery activity, and alert the help desk.
+- **Maintain business continuity:** Restrict recovery actions without unnecessarily locking Dana's account.
+- **Check financial activity:** Have Finance review corporate cards, payments, and vendor banking changes for anomalies.
+- **Contain if needed:** Escalate protections if evidence of compromise emerges.
