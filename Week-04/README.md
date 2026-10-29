@@ -2,9 +2,6 @@
 
 ## IAM Case Study: The MFA Reset Social Engineering Attempt
 
-### Scenario
-A caller claims to be Dana Whitfield, VP of Finance, and urgently requests a multi-factor authentication (MFA) reset after losing her phone. The caller pressures the help desk to bypass normal checks. The objective is to protect the account without allowing a convincing story or executive status to override security controls.
-
 ## 1. Red Flags
 
 - **Refusal of an independent callback:** Resistance to a trusted-channel callback undermines confidence in the claimed identity.
