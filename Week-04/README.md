@@ -2,7 +2,7 @@
 
 ## IAM Case Study: The MFA Reset Social Engineering Attempt
 
-## 1. Red Flags
+## DELIVERABLE 1 — Red Flags
 
 - **Refusal of an independent callback:** Resistance to a trusted-channel callback undermines confidence in the claimed identity.
 - **Weak identity evidence:** Knowing personal or employee details does not establish account ownership.
@@ -12,11 +12,11 @@
 
 **Decision:** Treat the caller's identity as unverified. Do not reset MFA based on urgency, rank, or information supplied during the call.
 
-## 2. Immediate Response
+## DELIVERABLE 2 — Immediate Response
 
 Keep the interaction professional and follow the established recovery procedure. Open a ticket, preserve the relevant details, and refuse any shortcut around identity verification. Use trusted internal contact information and established escalation paths rather than contact details supplied by the caller. If the behavior suggests an attack, notify the security team. Do not issue a temporary credential or change authentication methods before required checks and approvals are complete.
 
-## 3. Identity Verification
+## DELIVERABLE 3 — Identity Verification
 
 A lost phone may contain **all** of the user's normal authenticators. Recovery therefore needs an independent path that works even when the phone is unavailable.
 
@@ -26,7 +26,7 @@ A lost phone may contain **all** of the user's normal authenticators. Recovery t
 
 **Decision gate:** If identity cannot be established to the required assurance level, do not authorize recovery. Document and escalate as appropriate. Passing verification allows the request to proceed to authorization; it does **not** automatically approve the reset.
 
-## 4. Privileged / High-Risk MFA Recovery: Five Steps
+## DELIVERABLE 4 — Privileged / High-Risk MFA Recovery
 
 The design is **vendor-agnostic**. It uses Zero Trust, least privilege, separation of duties, and defense in depth. High-risk accounts warrant stronger safeguards; executive status alone does not necessarily mean administrative privilege.
 
@@ -42,7 +42,7 @@ The design is **vendor-agnostic**. It uses Zero Trust, least privilege, separati
 
 **Lost-device containment:** Do not wait for the post-mortem to protect a missing phone. For a confirmed lost, corporate-owned managed device, an authorized full remote wipe may be appropriate. For a personally owned managed device, prefer selective removal of corporate data under policy. A wipe may remain pending if the phone is offline; independently revoke affected authenticators and sessions, and track confirmation.
 
-## 5. Bonus: Post-Call Incident Response
+## DELIVERABLE 5 — Post-Call Incident Response
 
 An unsuccessful impersonation attempt still deserves documentation: the ticket creates an audit trail for future correlation. If several agents receive similar calls claiming to be Dana, treat the pattern as a potential **coordinated voice-phishing (vishing) campaign**, not automatically a distributed denial-of-service (DDoS) attack.
 
