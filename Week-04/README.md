@@ -14,7 +14,11 @@
 
 ## DELIVERABLE 2 — Immediate Response
 
-Keep the interaction professional and follow the established recovery procedure. Open a ticket, preserve the relevant details, and refuse any shortcut around identity verification. Use trusted internal contact information and established escalation paths rather than contact details supplied by the caller. If the behavior suggests an attack, notify the security team. Do not issue a temporary credential or change authentication methods before required checks and approvals are complete.
+- **Stay professional:** Follow the established recovery procedure.
+- **Document:** Open a ticket and record relevant details.
+- **Verify independently:** Use trusted internal contact information, not caller-provided details.
+- **Escalate:** Notify security if the call appears suspicious.
+- **Protect access:** No MFA reset or temporary credentials before verification and approval.
 
 ## DELIVERABLE 3 — Identity Verification
 
