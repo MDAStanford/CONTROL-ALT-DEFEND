@@ -42,7 +42,7 @@ The design is **vendor-agnostic**. It uses Zero Trust, least privilege, separati
 
 **Technical enforcement:** An approval requirement should be enforced by workflow and privilege design, not merely by asking staff to obtain a second signature. Alternative administrative and API paths must be controlled and monitored to reduce bypass risk.
 
-**Lost-device containment:** Do not wait for the post-mortem to protect a missing phone. For a confirmed lost, corporate-owned managed device, an authorized full remote wipe may be appropriate. For a personally owned managed device, prefer selective removal of corporate data under policy. A wipe may remain pending if the phone is offline; independently revoke affected authenticators and sessions, and track confirmation.
+**Lost-device containment:** Revoke sessions and authenticators immediately. Wipe corporate devices; selectively remove company data from personal devices, per policy. Confirm wipe status.
 
 ## DELIVERABLE 5 — Post-Call Incident Response
 
