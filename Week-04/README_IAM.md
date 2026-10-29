@@ -44,7 +44,7 @@ The design is **vendor-agnostic**. It uses Zero Trust, least privilege, separati
 
 **Lost-device containment:** Revoke sessions and authenticators immediately. Wipe corporate devices; selectively remove company data from personal devices, per policy. Confirm wipe status.
 
-## DELIVERABLE 5 — Post-Call Incident Response
+## DELIVERABLE 5 — Post-Mortem
 
 - **Document the attempt:** Preserve an audit trail for future investigations.
 - **Identify patterns:** Repeated calls may indicate a coordinated vishing attack.
