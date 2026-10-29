@@ -4,7 +4,7 @@
 
 ## DELIVERABLE 1 — Red Flags
 
-- **Refusal of an independent callback:** Resistance to a trusted-channel callback undermines confidence in the claimed identity.
+- **Refusal of an independent callback:** Resistance to a trusted-channel callback undermines confidence.
 - **Weak identity evidence:** Knowing personal or employee details does not establish account ownership.
 - **Sensitive recovery request:** Reassigning MFA could give an attacker control of a high-value account.
 - **Location and contact inconsistency:** A UK phone number paired with an Austin, TX claim warrants scrutiny, though it is not proof of fraud.
