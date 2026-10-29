@@ -22,13 +22,11 @@
 
 ## DELIVERABLE 3 — Identity Verification
 
-A lost phone may contain **all** of the user's normal authenticators. Recovery therefore needs an independent path that works even when the phone is unavailable.
-
-- Prefer a previously enrolled, independent phishing-resistant authenticator, such as a hardware security key, if one exists.
-- Otherwise use an approved, high-assurance recovery procedure, such as supervised verification against trusted organizational records, adapted to the organization's circumstances.
-- Do not treat biographical questions, caller-supplied phone numbers, or ordinary callbacks as sufficient proof on their own.
-
-**Decision gate:** If identity cannot be established to the required assurance level, do not authorize recovery. Document and escalate as appropriate. Passing verification allows the request to proceed to authorization; it does **not** automatically approve the reset.
+- **Plan for lost access:** The phone may contain all registered authenticators.
+- **Use a backup:** Verify with a previously enrolled security key or other independent authenticator, if available.
+- **Use approved recovery:** If no backup exists, follow a high-assurance identity verification process.
+- **Reject weak proof:** Personal details and caller-provided contact information are insufficient.
+- **Fail closed:** If identity cannot be verified, deny recovery and escalate. Verification permits review, not automatic approval.
 
 ## DELIVERABLE 4 — Privileged / High-Risk MFA Recovery
 
