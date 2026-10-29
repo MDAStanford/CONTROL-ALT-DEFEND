@@ -7,13 +7,11 @@ Weekly security scenario responses demonstrating Identity & Access Management (I
 | Week | IAM response | GRC response | Status |
 | --- | --- | --- | --- |
 | 03 — Northwind Health: AI agent / non-human identity | [IAM Response](Week-03/IAM-Response.md) | [GRC Response](Week-03/GRC-Response.md) | IAM case study linked; GRC draft pending |
+| 04 — MFA reset social engineering | [Week 4 README](Week-04/README.md) | Included in README | Published |
 
 ## Structure
 
-Each new `Week-XX/` folder contains:
-- `IAM-Response.md` — technical findings, actions, and validation.
-- `GRC-Response.md` — risk assessment, control mapping, recommendations, and evidence.
-- Optional `Evidence/` — sanitized supporting material.
+Going forward, each `Week-XX/` folder contains a single `README.md` with the week's scenario, IAM and GRC reasoning, and response. Earlier files remain unchanged.
 
 ## Original IAM case study
 
