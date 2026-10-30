@@ -92,3 +92,16 @@ An audit schedule supports governance but does not, by itself, demonstrate frame
 **FAIL / DOES NOT MEET — VENDOR NOT APPROVED.**
 
 Remediation and satisfactory supporting evidence are required before approval. This determination concerns the vendor's fit against the organization's security and privacy requirements; it is not an auditor's opinion on the vendor's SOC 2 examination.
+
+## BONUS — Response to Sales (Friday Deadline)
+
+**Two-sentence response:**
+
+> Can you clarify what's driving the Friday deadline and whether the vendor needs immediate access to sensitive data? We can develop a phased remediation plan with owners, deadlines, and compensating controls, but vendor approval and production access must wait until critical security and contractual requirements are satisfied.
+
+**Action plan:**
+- Maintain **FAIL / DOES NOT MEET** and withhold approval.
+- Identify missing evidence and contractual requirements; assign owners and target dates.
+- Work with the vendor and Sales on milestones and periodic status reviews; remediation may take months.
+- Consider a limited, separately authorized pilot using synthetic data only, without production access or protected health information.
+- Reassess after remediation and evidence review before granting approval.
