@@ -49,5 +49,3 @@ Our investment reduces expected annual losses by 63%, leaving $170,000 in residu
 These numbers aren't a crystal ball. They provide a mathematical basis for allocating security resources.
 
 Confidence remains provisional until the assumptions are validated against historical incidents, financial losses, and actual control performance. Estimates should be reviewed periodically.
-
-*AI-formatted*
