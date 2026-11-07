@@ -9,6 +9,7 @@ Weekly security scenario responses demonstrating Identity & Access Management (I
 | 03 — Northwind Health: AI agent / non-human identity | [IAM Response](Week-03/IAM-Response.md) | [GRC Response](Week-03/GRC-Response.md) | IAM case study linked; GRC draft pending |
 | 04 — MFA reset social engineering | [README_IAM](Week-04/README_IAM.md) | Pending | Published |
 | 05 — The $60,000 Question | Pending | [README_GRC](Week-05/README_GRC.md) | Published |
+| 06 — SSO Go-Live | [README_IAM](Week-06/README_IAM.md) | Pending | Published |
 
 ## Structure
 
