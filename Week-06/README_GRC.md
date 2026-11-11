@@ -27,10 +27,12 @@
 
 ## Response to Head of Product
 
-> ClinicConnect does not currently meet several requirements we have promised our clinics. Its recovery timeline is substantially longer than ours, its incident-reporting terms may prevent us from notifying clinics on time, and its security review identified unresolved access-control concerns.
+> ClinicConnect does not meet several of our requirements. Its recovery time is too long, it may not notify us quickly enough about security incidents, and there are unresolved concerns about who can access patient information.
 >
-> I recommend we do not approve ClinicConnect for the planned launch. Product and Procurement should immediately evaluate other video-visit providers with equivalent capabilities, while Legal and Security verify their contracts, recovery plans, and protections for patient information.
+> I recommend we do not approve ClinicConnect for launch. Product and Procurement should immediately look for another video provider. Legal and Security should review the new provider's contracts, recovery plans, and security controls.
 >
-> We can continue preparing the product experience using test data, but we should not activate real patient visits until a provider passes due diligence. If no suitable provider is ready within four weeks, we should delay the launch rather than accept risks we cannot substantiate or control.
+> We can continue testing with fake patient data, but we should not allow real patient visits until a provider passes our security review.
+>
+> If we cannot find a qualified provider within four weeks, we should delay the launch rather than put patient information and care at risk.
 
 **Assessment method:** Reviewed the supplied vendor questionnaire, subprocessor list, and SOC 2 Type II excerpts; identified discrepancies and evidence gaps. No live control tests or independent validation were performed.
