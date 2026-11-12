@@ -1,29 +1,31 @@
-# Week 6 — Third-Party Risk Assessment
+# Week 6 — Vendor Risk Review
 
-**Scenario:** Northwind Healthcare is evaluating ClinicConnect Video for approximately 60,000 patient visits per month, with a proposed launch in four weeks. *Fictional portfolio exercise; findings are based on supplied scenario evidence, not an actual vendor audit.*
+**Scenario:** Northwind Healthcare is considering ClinicConnect Video for about 60,000 patient visits a month. Launch is four weeks away.
 
-## Risk assessment
+*Fictional case study based on provided documents, not a real vendor audit.*
 
-**Tier: Critical.** The service handles sensitive patient information at scale, and an extended outage could interrupt time-sensitive care. Criticality reflects potential impact; the clinical consequences would need confirmation against actual use cases.
+## Risk and decision
 
-**Decision: Reject on current evidence.** ClinicConnect cannot demonstrate alignment with Northwind's recovery and breach-notification commitments. Product and Procurement should assess equivalent vendors; delay launch if none passes due diligence.
+**Risk: Critical.** ClinicConnect would handle sensitive patient information. A long outage could delay patient care. The actual impact would depend on how clinics use the service.
 
-## Findings and evidence required
+**Decision: Do not approve for launch.** ClinicConnect has not shown it can meet Northwind's recovery, incident-reporting, and access-security requirements. Look for another provider. Delay launch if no provider passes the review.
 
-| Finding | Risk / gap | Required evidence or action |
+## Main findings
+
+| Issue | What we found | What we need |
 |---|---|---|
-| Recovery | Vendor RTO **24 hours** vs Northwind **4 hours** | Tested four-hour recovery or validated continuity alternative |
-| Incident notification | Vendor: **30 days after confirmation**; Northwind: **5 business days after discovery** | Legal-approved terms enabling Northwind to meet its deadline |
-| Access governance | Qualified SOC 2 opinion: two missed quarterly reviews | Comprehensive current access review, remediation records, and recurring review controls |
-| MFA | Three support engineers lacked MFA in Q2 despite questionnaire claim | Policy coverage, authentication logs, and targeted retesting of affected accounts |
-| Video infrastructure | Media relay excluded from SOC 2 scope; report covers Security only | Relevant independent assurance, architecture/data-flow documentation, and security testing |
-| Offshore support | Contractors remotely access production support tooling | Privilege inventory, ePHI access assessment, least-privilege restrictions, PIM, masking, and logs |
-| BAA and subcontractors | Standard nonnegotiable BAA; multiple subprocessors | Legal review, signed acceptable BAA, subcontractor obligations, and US-storage evidence |
+| System recovery | ClinicConnect allows **24 hours** to recover; Northwind needs **4 hours**. | Proof it can recover within four hours, or a tested backup plan. |
+| Security incident reporting | ClinicConnect allows **30 days after confirming an incident** to report it. Northwind must notify clinics within **5 business days of discovering it**. | Contract terms that give Northwind enough time to meet its commitment. |
+| Access reviews | The SOC 2 report flagged **two missed quarterly access reviews**. | A completed access review, proof of fixes, and a plan to keep reviews on schedule. |
+| Multi-factor authentication (MFA) | The questionnaire says MFA is required, but **three support engineers did not have it** in Q2. | Sign-in records and proof those accounts are now protected. |
+| Video system security | The video relay system was **not covered** by the SOC 2 review, which covered Security controls only. | Security testing, an explanation of how patient data moves, and independent evidence covering the missing system. |
+| Overseas support access | Contractors outside the US can remotely access production support tools. | Details of what they can see or change, plus access restrictions, activity logs, and protection of patient data. |
+| Contracts and subcontractors | ClinicConnect offers a standard, nonnegotiable Business Associate Agreement (BAA) and uses several other providers. | Legal approval of the BAA, clear subcontractor responsibilities, and proof of where patient data is stored. |
 
-## Questionnaire cross-check
+## Claims that need checking
 
-1. **MFA:** The claim of universal production MFA is undermined by the SOC 2 support-tool exception; determine whether the issue is remediated.
-2. **US hosting:** US-region storage is **not disproved** by offshore support access, but remote access may expose patient data and requires verification of privileges, transfers, and safeguards.
+- **MFA:** ClinicConnect says everyone has MFA, but its security report found exceptions. Confirm those accounts were fixed.
+- **US data storage:** Overseas access does not prove data is stored outside the US. Check where data is stored and whether overseas staff can view patient information.
 
 ## Response to Head of Product
 
@@ -35,4 +37,4 @@
 >
 > If we cannot find a qualified provider within four weeks, we should delay the launch rather than put patient information and care at risk.
 
-**Assessment method:** Reviewed the supplied vendor questionnaire, subprocessor list, and SOC 2 Type II excerpts; identified discrepancies and evidence gaps. No live control tests or independent validation were performed.
+**How I assessed it:** I compared the vendor questionnaire, subcontractor list, and SOC 2 report excerpts. I identified gaps and conflicting claims, but did not test the vendor's systems.
