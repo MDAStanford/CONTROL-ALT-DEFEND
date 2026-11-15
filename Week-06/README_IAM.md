@@ -1,42 +1,49 @@
 # Week 06 — IAM: The Role Cleanup
 
-## Proposed access
+## Overview
 
-| Employee | Role | Allowed access | Remove |
-|---|---|---|---|
-| Ana | Finance Analyst | View invoices | Export |
-| Ben | Finance Analyst | View invoices | Export |
-| Chloe | Finance Analyst | View invoices | Create, edit, export |
-| Dev | Billing Specialist | View, create, edit invoices; issue refunds | — |
-| Elena | Billing Specialist | View, create, edit invoices; issue refunds | — |
-| Farid | Billing Specialist | View, create, edit invoices; issue refunds | Delete, approve refunds, export |
-| Grace | Billing Specialist | View, create, edit invoices; issue refunds | — |
-| Hana | Finance Manager | View invoices; approve refunds | Create, edit, delete, issue refunds, export, admin |
-| Ivan | Support Agent | View invoices | — |
-| Jo | Support Agent | View invoices | Issue refunds |
-| Kai | IT Admin | Manage system settings | View invoices |
-| Lena | External Auditor | View invoices | Edit, export |
+Access to the billing system has grown without clear rules. Employees inherited permissions from coworkers, leaving some with more access than their jobs require.
 
-**Export:** No standing export permission in standard roles. Hana confirms the business need; approved access is assigned by Kai, preferably temporarily where supported. Invoice views should exclude unnecessary patient details where supported.
+The goal is to assign access by job responsibility, remove unnecessary permissions, and prevent conflicting financial transactions.
 
-## Three conflicts
+## Deliverables
 
-| Forbidden combination | Original accounts |
-|---|---|
-| Approve and issue refunds | Farid, Hana |
-| Create and delete invoices | Farid, Hana |
-| Edit invoices and approve refunds | Farid, Hana |
+### 1. Role Structure
 
-Temporary access must not bypass these rules. A manager who edited an invoice must not approve a refund involving that invoice later. Test that the system blocks this and permits independent approval; confirm the application can enforce it.
+Six standard roles: Finance Analyst, Billing Specialist, Finance Manager, Support Agent, IT Admin, and External Auditor.
 
-## Safe rollout
+Each role receives only the permissions needed for its job. Patient billing exports require separate approval.
 
-1. Record current access and confirm job requirements.
-2. Correct Farid's and Hana's high-risk conflicts first.
-3. Pilot with a small group; test allowed and blocked actions.
-4. Fix failures, retest, and expand in stages; keep a rollback plan.
-5. Audit final access and approved exceptions; repeat reviews quarterly.
+### 2. Access Review
 
-Keep test results, screenshots, and logs in a secure evidence repository.
+Eight employees have excessive permissions. Farid and Hana present the highest risk.
 
-**Finding:** 18 excess individual permission grants identified for review/removal. These are proposed changes, not live account changes.
+**18 unnecessary permission grants** were identified for review or removal.
+
+### 3. Segregation of Duties
+
+Three prohibited combinations:
+
+- Approving and issuing refunds.
+- Creating and deleting invoices.
+- Editing invoices and approving refunds.
+
+Farid and Hana currently violate all three.
+
+### 4. Remediation Plan
+
+1. Document existing access.
+2. Address Farid and Hana first.
+3. Test new roles with a small group.
+4. Correct problems and roll out in stages.
+5. Audit results and review access quarterly.
+
+### 5. Validation
+
+Confirm employees can perform their jobs without unnecessary access. Test that conflicting transactions are blocked and retain evidence of the results.
+
+## Supporting Detail
+
+[Employee-by-employee access review (Google Sheet)](https://docs.google.com/spreadsheets/d/1bdljKwdV7xa1EomWg46Lw6sCnK_xmc2GxbPTYvvWMf0/edit)
+
+*These are proposed changes, not live account modifications.*
