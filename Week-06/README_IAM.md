@@ -1,49 +1,48 @@
-# Week 06 — IAM: The Role Cleanup
+# Week 06 — Billing System Access Cleanup
 
 ## Overview
 
-Access to the billing system has grown without clear rules. Employees inherited permissions from coworkers, leaving some with more access than their jobs require.
+Employees were given access by copying other people's permissions. Some can now do things their jobs don't require.
 
-The goal is to assign access by job responsibility, remove unnecessary permissions, and prevent conflicting financial transactions.
+**My recommendation:** Give each job a defined set of permissions, remove extra access, and separate duties that could allow fraud or mistakes.
 
 ## Deliverables
 
-### 1. Role Structure
+### 1. Who should be able to do what?
 
-Six standard roles: Finance Analyst, Billing Specialist, Finance Manager, Support Agent, IT Admin, and External Auditor.
+| Job | Access needed |
+|---|---|
+| Finance Analyst | View invoices |
+| Billing Specialist | View, create, and edit invoices; issue refunds |
+| Finance Manager | View invoices; approve refunds |
+| Support Agent | View invoices |
+| IT Admin | Manage system settings |
+| External Auditor | View invoices |
 
-Each role receives only the permissions needed for its job. Patient billing exports require separate approval.
+Deleting invoices is not standard access. Exporting patient billing data requires separate approval.
 
-### 2. Access Review
+### 2. Whose access needs fixing?
 
-Eight employees have excessive permissions. Farid and Hana present the highest risk.
+**Farid and Hana first.** Both can perform combinations of actions that should be kept separate.
 
-**18 unnecessary permission grants** were identified for review or removal.
+Six others also have extra permissions: **Ana, Ben, Chloe, Jo, Kai, and Lena**.
 
-### 3. Segregation of Duties
+In total, **18 permission grants** need review and possible removal. The [access review sheet](https://docs.google.com/spreadsheets/d/1bdljKwdV7xa1EomWg46Lw6sCnK_xmc2GxbPTYvvWMf0/edit) shows exactly what each person should keep or lose.
 
-Three prohibited combinations:
+### 3. What must never be combined?
 
-- Approving and issuing refunds.
-- Creating and deleting invoices.
-- Editing invoices and approving refunds.
+- Approving **and** issuing a refund.
+- Creating **and** deleting an invoice.
+- Editing an invoice **and** approving its refund.
 
-Farid and Hana currently violate all three.
+Farid and Hana currently have all three conflicts.
 
-### 4. Remediation Plan
+### 4. How would I fix it safely?
 
-1. Document existing access.
-2. Address Farid and Hana first.
-3. Test new roles with a small group.
-4. Correct problems and roll out in stages.
-5. Audit results and review access quarterly.
+1. Save a record of current access and confirm what each job needs.
+2. Resolve Farid's and Hana's conflicting access first.
+3. Test the new permissions with a small group, including actions that must be blocked.
+4. Fix any failures, then move everyone else over in stages. Keep a rollback option.
+5. Check the final access, save test evidence, and review permissions every quarter.
 
-### 5. Validation
-
-Confirm employees can perform their jobs without unnecessary access. Test that conflicting transactions are blocked and retain evidence of the results.
-
-## Supporting Detail
-
-[Employee-by-employee access review (Google Sheet)](https://docs.google.com/spreadsheets/d/1bdljKwdV7xa1EomWg46Lw6sCnK_xmc2GxbPTYvvWMf0/edit)
-
-*These are proposed changes, not live account modifications.*
+**Status:** Proposed plan only. No real accounts were changed.
