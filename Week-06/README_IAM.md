@@ -2,47 +2,58 @@
 
 ## Overview
 
-Employees were given access by copying other people's permissions. Some can now do things their jobs don't require.
+Billing-system permissions were copied between employees without checking what each job required. This left some people with unnecessary access and created conflicts around invoices and refunds.
 
-**My recommendation:** Give each job a defined set of permissions, remove extra access, and separate duties that could allow fraud or mistakes.
+**Recommendation:** Define access by job, remove unnecessary permissions, and test the changes before rolling them out.
 
 ## Deliverables
 
-### 1. Who should be able to do what?
+### 1. Proposed Roles and Permissions
 
-| Job | Access needed |
+| Job Title | Description of Duties | Permissions Needed |
+|---|---|---|
+| Finance Analyst | Review billing records | View invoices |
+| Billing Specialist | Process invoices and refunds | View, create, edit invoices; issue refunds |
+| Finance Manager | Oversee billing and authorize refunds | View invoices; approve refunds |
+| Support Agent | Answer billing questions | View invoices |
+| IT Admin | Maintain system configuration | Manage system settings |
+| External Auditor | Review billing records for compliance | View invoices |
+
+No standard role can delete invoices. Exporting patient billing data requires separate approval.
+
+### 2. Access Review
+
+Eight employees have extra permissions. **Farid and Hana are the highest priorities** because their access combines duties that should be separate.
+
+| Employee | Permissions to Remove |
 |---|---|
-| Finance Analyst | View invoices |
-| Billing Specialist | View, create, and edit invoices; issue refunds |
-| Finance Manager | View invoices; approve refunds |
-| Support Agent | View invoices |
-| IT Admin | Manage system settings |
-| External Auditor | View invoices |
+| Ana | Export billing data |
+| Ben | Export billing data |
+| Chloe | Create invoices, edit invoices, export billing data |
+| Farid | Delete invoices, approve refunds, export billing data |
+| Hana | Create invoices, edit invoices, delete invoices, issue refunds, export billing data, manage settings |
+| Jo | Issue refunds |
+| Kai | View invoices |
+| Lena | Edit invoices, export billing data |
 
-Deleting invoices is not standard access. Exporting patient billing data requires separate approval.
+**Total:** 18 permission grants proposed for removal. Dev, Elena, Grace, and Ivan already match their proposed roles.
 
-### 2. Whose access needs fixing?
+### 3. Conflicting Duties
 
-**Farid and Hana first.** Both can perform combinations of actions that should be kept separate.
+One person should not be able to:
 
-Six others also have extra permissions: **Ana, Ben, Chloe, Jo, Kai, and Lena**.
-
-In total, **18 permission grants** need review and possible removal. The [access review sheet](https://docs.google.com/spreadsheets/d/1bdljKwdV7xa1EomWg46Lw6sCnK_xmc2GxbPTYvvWMf0/edit) shows exactly what each person should keep or lose.
-
-### 3. What must never be combined?
-
-- Approving **and** issuing a refund.
-- Creating **and** deleting an invoice.
-- Editing an invoice **and** approving its refund.
+- Approve **and** issue refunds.
+- Create **and** delete invoices.
+- Edit invoices **and** approve refunds.
 
 Farid and Hana currently have all three conflicts.
 
-### 4. How would I fix it safely?
+### 4. Safe Cleanup Plan
 
-1. Save a record of current access and confirm what each job needs.
-2. Resolve Farid's and Hana's conflicting access first.
-3. Test the new permissions with a small group, including actions that must be blocked.
-4. Fix any failures, then move everyone else over in stages. Keep a rollback option.
-5. Check the final access, save test evidence, and review permissions every quarter.
+1. Confirm job needs and record existing permissions.
+2. Remove Farid's and Hana's conflicting access first.
+3. Pilot the new roles; test both permitted and blocked actions.
+4. Fix problems and roll out in stages, with a rollback plan.
+5. Save evidence, check final permissions, and review access quarterly.
 
-**Status:** Proposed plan only. No real accounts were changed.
+**Status:** Proposed changes only; no live accounts were modified.
