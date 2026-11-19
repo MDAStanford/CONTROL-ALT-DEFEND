@@ -42,9 +42,22 @@ Six proposed controls to reduce sign-in risk while keeping clinical operations r
 
 **Operational safeguard:** Test policies in report-only/pilot stages and validate clinical workflows before organization-wide enforcement.
 
-## Follow-up for Later Deliverables
+## Deliverable 3 — Shared-Tablet Authentication
 
-- Replace the current 90-day sign-in frequency; provisional clinical-staff target: **8 hours**, with a separate **5-minute device inactivity lock**.
-- Review trusted-location MFA exemptions and privileged authentication.
-- Resolve shared-tablet authentication without relying on shared identities or blanket MFA exemptions.
-- Keep event risk assessment separate from policy design and rollout planning.
+**If Windows tablet:** Give each employee an individual Microsoft Entra ID account. On supported managed Windows devices, use Windows Hello for Business with a separate PIN per user. Require user switching or sign-out between sessions, a five-minute inactivity lock, and user-specific application audit logs.
+
+**If Apple iPad:** Where supported, configure Shared iPad through Apple Business Manager and mobile device management (MDM). Give employees separate Managed Apple Accounts and sessions with their own supported passcodes. Require sign-out between users and user-specific application audit logs.
+
+**Trade-off:** Windows integrates more directly with Entra authentication; Shared iPad requires Apple management infrastructure and compatible applications. Both require workflow testing to ensure fast handoffs and reliable patient-data accountability.
+
+**Decision:** Share the tablet, never the identity. Do not rely on a shared device PIN as proof of which employee accessed patient data.
+
+## Deliverable 4 — Rollout Plan
+
+1. **Inventory:** Identify affected users, devices, applications, and legacy authentication dependencies.
+2. **Pilot:** Test policies with IT, Finance, and a small clinical group.
+3. **Validate:** Confirm clinicians can access patient records, shared tablets work, and emergency accounts remain available.
+4. **Deploy:** Roll out policies in stages, prioritizing privileged access and high-risk authentication.
+5. **Monitor:** Review sign-in failures, blocked access, help-desk tickets, and clinical disruptions. Adjust where necessary.
+
+Roll out in stages rather than enabling all six policies at once, to avoid interrupting patient care.
