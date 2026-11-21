@@ -10,6 +10,7 @@ Weekly security scenario responses demonstrating Identity & Access Management (I
 | 04 — MFA reset social engineering | [README_IAM](Week-04/README_IAM.md) | Pending | Published |
 | 05 — SSO Go-Live / The $60,000 Question | [README_IAM](Week-05/README_IAM.md) | [README_GRC](Week-05/README_GRC.md) | Published |
 | 06 — ClinicConnect Video / Third-Party Risk | — | [README_GRC](Week-06/README_GRC.md) | Published |
+| 07 — The $90,000 Security Budget | — | [README_GRC](Week-07/README_GRC.md) | Published |
 
 ## Structure
 
