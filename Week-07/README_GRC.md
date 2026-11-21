@@ -73,3 +73,11 @@ The objective was not to spend the entire budget. It was to identify which risks
 The $15,000 reserve provides flexibility for unexpected remediation costs.
 
 **Success depends on verified risk reduction, not simply money saved.**
+
+## BONUS QUESTION — Linked Risks (R3 & R6)
+
+R3 and R6 are linked. The unsupported R3 reminder server cannot run the EDR software proposed under R6.
+
+I would allocate **$30,000** to protect the 13 compatible servers and **$8,000** to isolate the remaining unsupported server. If the reminder server is not essential, shutting it down is another option, subject to confirming operational dependencies.
+
+**Effect on the plan:** The two remediation decisions must be coordinated. The combined **$38,000** allocation remains unchanged, and isolation or shutdown must be verified. This reduces exposure without requiring the proposed **$60,000** server rebuild.
