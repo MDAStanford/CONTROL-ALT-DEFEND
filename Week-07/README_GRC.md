@@ -12,15 +12,15 @@ Evaluate seven security risks and allocate a $90,000 remediation budget.
 
 ## Risk Assessment
 
-| Risk | Finding | Likelihood | Impact | Score |
-|---|---|---:|---:|---:|
-| R1 | Shared integration keys | 3 | 4 | 12 |
-| R2 | Weak administrator authentication | 3 | 4 | 12 |
-| R3 | Unsupported reminder server | 3 | 4 | 12 |
-| R4 | Security awareness gaps | 3 | 3 | 9 |
-| R5 | Missing SOC 2 audit evidence | 5 | 3 | 15 |
-| R6 | Missing EDR on production servers | 3 | 4 | 12 |
-| R7 | Unauthorized patient data transfer | 5 | 4 | 20 |
+| Risk | Finding | Likelihood | Impact | Score | Rating |
+|---|---|---:|---:|---:|---|
+| R1 | Shared integration keys | 3 | 4 | 12 | Medium |
+| R2 | Weak administrator authentication | 3 | 4 | 12 | Medium |
+| R3 | Unsupported reminder server | 3 | 4 | 12 | Medium |
+| R4 | Security awareness gaps | 3 | 3 | 9 | Medium |
+| R5 | Missing SOC 2 audit evidence | 5 | 3 | 15 | High |
+| R6 | Missing EDR on production servers | 3 | 4 | 12 | Medium |
+| R7 | Unauthorized patient data transfer | 5 | 4 | 20 | High |
 
 *R7 likelihood reflects an ongoing, confirmed contractual data-handling violation—not the probability of an external attack.*
 
