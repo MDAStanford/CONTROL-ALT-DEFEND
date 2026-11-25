@@ -1,8 +1,8 @@
-# GRC — The Policy Nobody Follows
+# GRC: The Policy Nobody Follows
 
 **Objective:** Assess Northwind's Access and Device Security Policy, correct deficient controls and identify audit evidence before the SOC 2 audit window opens.
 
-## D1 — Policy findings
+## D1: Policy findings
 
 **Assignment:** List at least five clauses that wouldn't survive an audit. For each, say what's wrong (vague, outdated, unenforceable, contradicted by the checks, or no owner). Also name one clause that's already fine, and why.
 
@@ -61,7 +61,7 @@
 - No expiration date.
 - Recommend documented approvals and time-limited exceptions.
 
-### 7. Laptops — Satisfactory
+### 7. Laptops: Satisfactory
 
 **Original policy:** All company laptops must have full-disk encryption turned on. The Head of IT checks the monthly device report and signs it off.
 
@@ -75,25 +75,25 @@
 - Last reviewed March 2023.
 - Recommend independent approval and annual reviews, plus reviews following significant changes.
 
-## D2 — Revised clauses
+## D2: Revised clauses
 
 **Assignment:** Rewrite three clauses so each says who does what, how often, and what record proves it. Keep each to two or three sentences that a clinic receptionist could follow.
 
-**Clause 2 — Access reviews**
+**Clause 2: Access reviews**
 - System owners must review their team's user access every quarter and list permissions requiring changes or removal.
 - An independent manager or Security reviewer must approve the results, and IT must retain signed reviews and change tickets.
 
-**Clause 4 — Incidents**
+**Clause 4: Incidents**
 - Staff must report suspected incidents to the IT help desk immediately, and Security must document an initial assessment within four hours of receiving the report.
 - Security must maintain timestamped incident tickets, track deadlines and escalate potential delays to management.
 - Security and management must notify affected clinics within five business days of discovering a breach involving their data and retain notification records.
 
-**Clause 5 — Vendors**
+**Clause 5: Vendors**
 - IT must set vendor account expiration dates no more than 90 days out, with renewal requiring written business owner approval.
 - IT must disable accounts after 30 days of inactivity and revoke access immediately upon contract termination.
 - IT must retain access requests, approvals and account change logs.
 
-## D3 — Audit evidence
+## D3: Audit evidence
 
 **Assignment:** For each rewritten clause, name what an auditor would ask to see.
 
@@ -107,7 +107,7 @@
 | | | Contract termination notices |
 | | | Disablement records |
 
-## D4 — Leadership note
+## D4: Leadership note
 
 **Assignment:** What you'd change, what staff will notice, and the one decision you need.
 
@@ -126,7 +126,7 @@
 
 **Decision required:** Approve the revised Access and Device Security Policy.
 
-## Bonus — Password policy
+## Bonus: Password policy
 
 **Assignment:** One of these clauses shouldn't just be tightened up. The rule itself is wrong. Which one, and why?
 
