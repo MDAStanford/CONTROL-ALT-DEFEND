@@ -131,7 +131,6 @@
 - Quarterly access reviews.
 - Stricter vendor access renewals.
 - Clearer incident reporting procedures.
-- Existing five-business-day notification obligation unchanged.
 
 **Decision required:** Approve the revised Access and Device Security Policy.
 
