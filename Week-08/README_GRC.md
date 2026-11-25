@@ -91,7 +91,7 @@
 **Original policy:** Security incidents must be reported promptly to IT.
 
 - Staff must report suspected incidents to the IT help desk immediately, and Security must document an initial assessment within four hours of receiving the report.
-- Security must maintain timestamped incident tickets, track deadlines and escalate potential delays to management.
+- Security must maintain timestamped incident tickets, automate deadline tracking and alerts, and escalate potential delays to management.
 - Security and management must notify affected clinics within five business days of discovering a breach involving their data and retain notification records.
 
 **Clause 5: Vendors**
