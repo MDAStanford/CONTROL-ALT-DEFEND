@@ -80,6 +80,9 @@
 **Assignment:** Rewrite three clauses so each says who does what, how often, and what record proves it. Keep each to two or three sentences that a clinic receptionist could follow.
 
 **Clause 2: Access reviews**
+
+**Original policy:** Access should be reviewed regularly by management.
+
 - System owners must review their team's user access every quarter and list permissions requiring changes or removal.
 - An independent manager or Security reviewer must approve the results, and IT must retain signed reviews and change tickets.
 
@@ -92,6 +95,9 @@
 - Security and management must notify affected clinics within five business days of discovering a breach involving their data and retain notification records.
 
 **Clause 5: Vendors**
+
+**Original policy:** Vendors may be given access as needed to do their work.
+
 - IT must set vendor account expiration dates no more than 90 days out, with renewal requiring written business owner approval.
 - IT must disable accounts after 30 days of inactivity and revoke access immediately upon contract termination.
 - IT must retain access requests, approvals and account change logs.
