@@ -4,38 +4,68 @@
 
 ## D1 — Policy findings
 
-**1. Passwords**
+**Assignment:** List at least five clauses that wouldn't survive an audit. For each, say what's wrong (vague, outdated, unenforceable, contradicted by the checks, or no owner). Also name one clause that's already fine, and why.
+
+### 1. Passwords
+
+**Original policy:** All staff must use strong passwords and change them every 30 days.
+
+**Findings:**
 - Vague definition of strong passwords.
 - Outdated, unenforced 30-day expiration requirement.
 - 85 of 120 accounts have not changed passwords in six months.
 
-**2. Access reviews**
+### 2. Access reviews
+
+**Original policy:** Access should be reviewed regularly by management.
+
+**Findings:**
 - Undefined review frequency.
 - Only two of four quarterly reviews documented.
 - Potential conflict of interest in approvals.
 
-**3. Personal devices**
+### 3. Personal devices
+
+**Original policy:** Staff must not store company data on personal devices.
+
+**Findings:**
 - 24 of 60 staff surveyed access work email on personal phones.
 - No defined method for verifying compliance.
 - Email access alone does not prove local data storage.
 - Recommend company-owned or managed personal devices.
 
-**4. Incidents**
+### 4. Incidents
+
+**Original policy:** Security incidents must be reported promptly to IT.
+
+**Findings:**
 - Reporting deadline undefined.
 - Reporting delays of 1, 4 and 9 working days.
 - Risk to contractual breach notification obligations.
 
-**5. Vendors**
+### 5. Vendors
+
+**Original policy:** Vendors may be given access as needed to do their work.
+
+**Findings:**
 - Seven guest accounts without expiration dates.
 - Three inactive for over 180 days.
 
-**6. Exceptions**
+### 6. Exceptions
+
+**Original policy:** Exceptions to this policy may be granted by management.
+
+**Findings:**
 - Empty exception register.
 - MFA exemption (IT-2201) missing from the register.
 - No expiration date.
 - Recommend documented approvals and time-limited exceptions.
 
-**7. Laptops — Satisfactory**
+### 7. Laptops — Satisfactory
+
+**Original policy:** All company laptops must have full-disk encryption turned on. The Head of IT checks the monthly device report and signs it off.
+
+**Findings:**
 - 95 of 95 laptops encrypted.
 - Three consecutive monthly reports signed by the Head of IT.
 - Clear requirements, ownership and supporting evidence.
@@ -46,6 +76,8 @@
 - Recommend independent approval and annual reviews, plus reviews following significant changes.
 
 ## D2 — Revised clauses
+
+**Assignment:** Rewrite three clauses so each says who does what, how often, and what record proves it. Keep each to two or three sentences that a clinic receptionist could follow.
 
 **Clause 2 — Access reviews**
 - System owners must review their team's user access every quarter and list permissions requiring changes or removal.
@@ -63,6 +95,8 @@
 
 ## D3 — Audit evidence
 
+**Assignment:** For each rewritten clause, name what an auditor would ask to see.
+
 | Access reviews | Incidents | Vendors |
 |---|---|---|
 | Quarterly reviews | Timestamped incident tickets | Account inventory |
@@ -74,6 +108,8 @@
 | | | Disablement records |
 
 ## D4 — Leadership note
+
+**Assignment:** 120 words maximum. What you'd change, what staff will notice, and the one decision you need.
 
 **Recommended changes**
 - Defined review schedules.
@@ -91,6 +127,8 @@
 **Decision required:** Approve the revised Access and Device Security Policy.
 
 ## Bonus — Password policy
+
+**Assignment:** One of these clauses shouldn't just be tightened up. The rule itself is wrong. Which one, and why?
 
 **Problem:** Mandatory 30-day password changes encourage predictable password modifications.
 
