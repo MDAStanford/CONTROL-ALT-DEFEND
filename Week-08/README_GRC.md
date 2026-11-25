@@ -1,89 +1,105 @@
 # GRC — The Policy Nobody Follows
 
-## Overview
+**Objective:** Assess Northwind's Access and Device Security Policy, correct deficient controls and identify audit evidence before the SOC 2 audit window opens.
 
-Northwind's SOC 2 audit window opens in approximately five months. Management requested an assessment of its Access and Device Security Policy to identify deficiencies, rewrite three clauses and establish appropriate audit evidence.
+## D1 — Policy findings
 
-Scenario date: November 23, 2026. Policy version: 2.1. Last reviewed: March 2023. Owner and approver: IT. Northwind must notify affected clinics within five business days of discovering a breach involving their data.
+**1. Passwords**
+- Vague definition of strong passwords.
+- Outdated, unenforced 30-day expiration requirement.
+- 85 of 120 accounts have not changed passwords in six months.
 
-## D1 — Find the problems
+**2. Access reviews**
+- Undefined review frequency.
+- Only two of four quarterly reviews documented.
+- Potential conflict of interest in approvals.
 
-**Question:** Identify at least five deficient clauses, explain what is wrong with each and identify one satisfactory clause.
+**3. Personal devices**
+- 24 of 60 staff surveyed access work email on personal phones.
+- No defined method for verifying compliance.
+- Email access alone does not prove local data storage.
+- Recommend company-owned or managed personal devices.
 
-| Clause | Finding | Recommendation |
+**4. Incidents**
+- Reporting deadline undefined.
+- Reporting delays of 1, 4 and 9 working days.
+- Risk to contractual breach notification obligations.
+
+**5. Vendors**
+- Seven guest accounts without expiration dates.
+- Three inactive for over 180 days.
+
+**6. Exceptions**
+- Empty exception register.
+- MFA exemption (IT-2201) missing from the register.
+- No expiration date.
+- Recommend documented approvals and time-limited exceptions.
+
+**7. Laptops — Satisfactory**
+- 95 of 95 laptops encrypted.
+- Three consecutive monthly reports signed by the Head of IT.
+- Clear requirements, ownership and supporting evidence.
+
+**Policy governance**
+- IT is both owner and approver.
+- Last reviewed March 2023.
+- Recommend independent approval and annual reviews, plus reviews following significant changes.
+
+## D2 — Revised clauses
+
+**Clause 2 — Access reviews**
+- System owners must review their team's user access every quarter and list permissions requiring changes or removal.
+- An independent manager or Security reviewer must approve the results, and IT must retain signed reviews and change tickets.
+
+**Clause 4 — Incidents**
+- Staff must report suspected incidents to the IT help desk immediately, and Security must document an initial assessment within four hours of receiving the report.
+- Security must maintain timestamped incident tickets, track deadlines and escalate potential delays to management.
+- Security and management must notify affected clinics within five business days of discovering a breach involving their data and retain notification records.
+
+**Clause 5 — Vendors**
+- IT must set vendor account expiration dates no more than 90 days out, with renewal requiring written business owner approval.
+- IT must disable accounts after 30 days of inactivity and revoke access immediately upon contract termination.
+- IT must retain access requests, approvals and account change logs.
+
+## D3 — Audit evidence
+
+| Access reviews | Incidents | Vendors |
 |---|---|---|
-| 1. Passwords | Vague password requirements, outdated expiration rule and lack of enforcement. | Establish minimum password length and require changes when compromise is suspected or confirmed. |
-| 2. Access reviews | Undefined frequency, inconsistent completion and potential approval conflicts. | Quarterly reviews with independent approval. |
-| 3. Personal devices | Policy does not clearly address personal device access or how compliance is verified. | Issue company-owned devices or require managed personal devices. |
-| 4. Incidents | Subjective reporting requirement and documented reporting delays. | Establish measurable reporting and assessment deadlines, with documented escalation. |
-| 5. Vendors | No access expiration dates or inactivity controls. | Maximum 90-day access lifecycle; disable accounts after 30 days of inactivity. |
-| 6. Exceptions | Undocumented MFA exception with no expiration date. | Maintain an exception register with documented approval and time limits. |
-| 7. Laptops | **Satisfactory.** Clear requirement, defined accountability, monthly reviews and documented compliance. | Retain existing control. |
-
-**Additional policy governance findings:**
-
-| Finding | Recommendation |
-|---|---|
-| IT is both policy owner and approver. | Establish independent policy approval. |
-| Policy has not been reviewed in approximately 44 months. | Establish annual policy reviews and additional reviews following significant changes. |
-
-The personal device findings warrant further verification: accessing work email does not necessarily prove that company data is stored locally.
-
-## D2 — Rewrite three clauses
-
-**Question:** Rewrite three clauses so each says who does what, how often and what record proves it, in two or three sentences.
-
-### Clause 2 — Access reviews
-
-System owners must review their team's user access every quarter and list any permissions that need to be changed or removed. An independent manager or Security reviewer must approve the results, and IT must keep the signed review form and change tickets on file.
-
-### Clause 4 — Incidents
-
-All staff must report suspected security incidents to the IT help desk immediately, and Security must log an initial assessment within four hours. Security must keep timestamped incident tickets, track breach deadlines, and escalate any potential delays to management. Security and management must notify affected clinics within five business days of discovering a breach involving their data and save copies of those notices.
-
-### Clause 5 — Vendors
-
-IT must set an expiration date of no more than 90 days on all vendor accounts, and renewal requires written approval from the business owner. IT must disable vendor accounts after 30 days of inactivity and remove access immediately when a vendor's contract ends. IT must keep all access requests, owner approvals, and account change logs on file.
-
-## D3 — Evidence test
-
-**Question:** For each rewritten clause, name what an auditor would ask to see.
-
-| Clause | Audit evidence |
-|---|---|
-| 2. Access reviews | Quarterly access review records, independent approvals, permission changes, and remediation tickets. |
-| 4. Incidents | Timestamped incident tickets, initial assessments, escalation records, and dated client notifications. |
-| 5. Vendors | Vendor account inventory, access approvals, expiration dates, reauthorization records, sign-in logs, vendor contract termination notices, and account disablement records. |
+| Quarterly reviews | Timestamped incident tickets | Account inventory |
+| Independent approvals | Initial assessments | Access approvals |
+| Permission changes | Escalation records | Expiration dates |
+| Remediation tickets | Dated client notifications | Renewal records |
+| | | Sign-in logs |
+| | | Contract termination notices |
+| | | Disablement records |
 
 ## D4 — Leadership note
 
-**Question:** In 120 words maximum, explain what you'd change, what staff will notice, and the one decision you need.
+**Recommended changes**
+- Defined review schedules.
+- Independent approvals.
+- Time-limited vendor access.
+- Documented policy exceptions.
+- Measurable incident reporting requirements.
 
-Our review identified outdated policy requirements, inconsistent access reviews, delayed incident reporting, and inadequate vendor access controls.
+**Staff impact**
+- Quarterly access reviews.
+- Stricter vendor access renewals.
+- Clearer incident reporting procedures.
+- Existing five-business-day notification obligation unchanged.
 
-We recommend establishing defined review schedules, independent approvals, time-limited vendor access, documented policy exceptions, and measurable incident reporting requirements.
+**Decision required:** Approve the revised Access and Device Security Policy.
 
-Staff will notice quarterly access reviews, stricter vendor access renewal requirements, and clearer incident reporting procedures. The existing five-business-day client notification obligation remains unchanged.
+## Bonus — Password policy
 
-**Decision required:** Leadership approval of the revised Access and Device Security Policy.
+**Problem:** Mandatory 30-day password changes encourage predictable password modifications.
 
-## Bonus — Challenge the rule
-
-**Question:** Which clause should not simply be tightened because the rule itself is wrong, and why?
-
-Clause 1 — Passwords.
-
-Mandatory 30-day password changes are outdated and encourage predictable password modifications.
-
-Replace the existing requirement with:
-
-- Minimum password length of 15 characters.
-- Passphrases permitted.
-- Common and compromised passwords blocked.
-- No mandatory periodic password changes.
-- Password changes required when compromise is suspected or confirmed.
-
-This approach aligns with modern NIST password guidance.
+**Replacement requirements:**
+- Minimum 15 characters.
+- Permit passphrases.
+- Block common and compromised passwords.
+- Eliminate mandatory periodic password changes.
+- Require changes upon suspected or confirmed compromise.
 
 ---
 
