@@ -1,6 +1,6 @@
 # GRC: The Policy Nobody Follows
 
-**Objective:** Assess Northwind's Access and Device Security Policy, correct deficient controls and identify audit evidence before the SOC 2 audit window opens.
+**Assessment objective:** Assess Northwind's Access and Device Security Policy, correct deficient controls and identify audit evidence before the SOC 2 audit window opens.
 
 ## D1: Policy findings
 
