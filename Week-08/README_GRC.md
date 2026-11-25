@@ -32,7 +32,7 @@
 - 24 of 60 staff surveyed access work email on personal phones.
 - No defined method for verifying compliance.
 - Email access alone does not prove local data storage.
-- Recommend company-owned or managed personal devices.
+- Recommend company-owned or managed personal devices (BYOD).
 
 ### 4. Incidents
 
