@@ -84,6 +84,9 @@
 - An independent manager or Security reviewer must approve the results, and IT must retain signed reviews and change tickets.
 
 **Clause 4: Incidents**
+
+**Original policy:** Security incidents must be reported promptly to IT.
+
 - Staff must report suspected incidents to the IT help desk immediately, and Security must document an initial assessment within four hours of receiving the report.
 - Security must maintain timestamped incident tickets, track deadlines and escalate potential delays to management.
 - Security and management must notify affected clinics within five business days of discovering a breach involving their data and retain notification records.
