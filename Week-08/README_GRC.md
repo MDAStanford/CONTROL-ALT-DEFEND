@@ -109,7 +109,7 @@
 
 ## D4 — Leadership note
 
-**Assignment:** 120 words maximum. What you'd change, what staff will notice, and the one decision you need.
+**Assignment:** What you'd change, what staff will notice, and the one decision you need.
 
 **Recommended changes**
 - Defined review schedules.
