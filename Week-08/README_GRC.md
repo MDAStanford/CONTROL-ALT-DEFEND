@@ -61,7 +61,7 @@
 - No expiration date.
 - Recommend documented approvals and time-limited exceptions.
 
-### 7. Laptops: Satisfactory
+### 7. Laptops: SATISFACTORY
 
 **Original policy:** All company laptops must have full-disk encryption turned on. The Head of IT checks the monthly device report and signs it off.
 
