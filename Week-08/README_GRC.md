@@ -112,7 +112,7 @@
 | Independent approvals | Initial assessments | Access approvals |
 | Permission changes | Escalation records | Expiration dates |
 | Remediation tickets | Dated client notifications | Renewal records |
-| | | Sign-in logs |
+| | Deadline tracking and alert logs | Sign-in logs |
 | | | Contract termination notices |
 | | | Disablement records |
 
