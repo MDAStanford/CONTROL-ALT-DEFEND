@@ -9,21 +9,6 @@ This is a tabletop exercise; controls are proposed, not implemented or tested.
 
 Employees can authorize third-party applications without IT review or monitoring. Management wants risky access addressed without disrupting Marketing's valuable email tool.
 
-### Current state
-
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
-flowchart LR
- A[Employee approves app] --> B[Third-party application]
- B --> C[Company email: read or send]
- B --> D[Company files: read or modify]
- B --> E[Calendar: read or modify]
- style B fill:#fff3cd,stroke:#d97706,color:#000
- style C fill:#fee2e2,stroke:#dc2626,color:#000
- style D fill:#fee2e2,stroke:#dc2626,color:#000
- style E fill:#fee2e2,stroke:#dc2626,color:#000
-```
-
 ## Application inventory
 
 | App | Publisher | Permissions | Type | Users | Owner |
@@ -81,14 +66,12 @@ Acceptable risk is not zero risk.
 
 112 users; 83 weekend approvals. Publisher registered November 18. Automatic activity continues on November 23.
 
-```mermaid
-%%{init: {'xyChart': {'width': 420, 'height': 220}, 'themeVariables': {'fontSize': '12px'}}}%%
-xychart-beta
- title "DocuSharePro approvals"
- x-axis ["Fri 20", "Sat 21", "Sun 22", "Mon 23"]
- y-axis "Approvals" 0 --> 60
- bar [6, 31, 52, 23]
-```
+| Date | Approvals |
+|---|---:|
+| Fri 20 | 6 |
+| Sat 21 | 31 |
+| Sun 22 | 52 |
+| Mon 23 | 23 |
 
 Monday is a partial day.
 
@@ -99,12 +82,6 @@ Monday is a partial day.
 | 1. Contain | Revoke all 112 consent grants, block further approvals and verify existing tokens can no longer be used. | Stop further exposure. |
 | 2. Investigate | Run activity reports for all affected accounts, preserve evidence and remediate identified damage. | Determine whether compromise occurred and establish its extent. |
 | 3. Prevent recurrence | Implement consent restrictions, administrative approval and monitoring. | Address the underlying governance failure. |
-
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
-flowchart LR
- A[Contain] --> B[Investigate and remediate] --> C[Prevent recurrence]
-```
 
 Suspicious activity warrants containment, but data theft has not been confirmed.
 
@@ -118,24 +95,6 @@ Suspicious activity warrants containment, but data theft has not been confirmed.
 2. Applications requesting elevated permissions or coming from unverified publishers require IT Security approval and documented business justification from a named business owner.
 3. All application approvals must be logged and generate alerts for IT Security.
 4. MailMerge Plus will remain operational under administrative approval, with access restricted to authorized Marketing personnel and outbound email activity monitored and audited.
-
-### Proposed future state
-
-```mermaid
-%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
-flowchart LR
- A[Application consent request] --> B{Verified publisher and approved low-risk permissions?}
- B -->|Yes| C[User consent permitted]
- B -->|No| D[IT Security review]
- D --> E{Business justification and security approval?}
- E -->|Yes| F[Restricted application access]
- E -->|No| G[Access denied]
- C --> H[Logging and monitoring]
- F --> H
- style C fill:#dcfce7,stroke:#16a34a,color:#000
- style F fill:#dcfce7,stroke:#16a34a,color:#000
- style G fill:#fee2e2,stroke:#dc2626,color:#000
-```
 
 ## Bonus — ExportBot
 
