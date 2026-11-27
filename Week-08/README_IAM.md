@@ -3,11 +3,11 @@
 
 **Scenario:** Northwind — November 23, 2026
 
-This is a tabletop exercise; controls are proposed, not implemented or tested.
+This is a tabletop exercise. None of the proposed controls have been implemented or tested.
 
 ## Scenario overview
 
-Employees can authorize third-party applications without IT review or monitoring. Management wants risky access addressed without disrupting Marketing's valuable email tool.
+Employees can give apps access to company data without IT approval or monitoring. Management wants to fix this without taking away Marketing's email tool.
 
 ## Application inventory
 
@@ -30,14 +30,14 @@ Employees can authorize third-party applications without IT review or monitoring
 
 | Priority | App | Rationale |
 |---|---|---|
-| 1 — Immediate | DocuSharePro | Large attack surface, extensive permissions, suspicious approval activity and no ownership. |
-| 2 — Urgent | ExportBot | Company-wide blast radius, orphaned ownership and unchanged application secret. |
-| 3 — Prompt | PDF Tools Online | Excessive permissions, unverified publisher, dormant for 190 days and no established business need. |
+| 1 — Immediate | DocuSharePro | 112 users, broad access to mail and files, unusual approval activity and no owner. |
+| 2 — Urgent | ExportBot | Can read every company mailbox. Its owner left and its secret has never been changed. |
+| 3 — Prompt | PDF Tools Online | Can read and change files, comes from an unverified publisher, has not been used in 190 days and has no known business need. |
 
 | Probably fine | Rationale |
 |---|---|
-| SchedulePro | Calendar access is read-only and supports a legitimate scheduling function. |
-| HRLink | Despite 118 connected users, access is limited to basic profile information for authentication. |
+| SchedulePro | It reads calendars to help employees schedule meetings. |
+| HRLink | It has 118 users but only needs basic profile information for sign-in. |
 
 Acceptable risk is not zero risk.
 
@@ -49,14 +49,14 @@ Acceptable risk is not zero risk.
 
 | App | Decision | Reasoning and action |
 |---|---|---|
-| DocuSharePro | REMOVE | Revoke access due to excessive permissions, suspicious activity and lack of ownership. |
-| PDF Tools Online | REMOVE | Revoke dormant, excessive permissions for all 17 users. |
-| SchedulePro | RESTRICT | Reduce calendar access to free/busy availability if supported; assign named owner. |
-| MailMerge Plus | RESTRICT | Limit to authorized Marketing personnel, monitor outbound email and assign named owner. |
-| TaskBoard | RESTRICT | Validate calendar write requirements, remove unnecessary permissions and assign named owner. |
-| ExportBot | RESTRICT | Assign new ownership, rotate credentials and reduce mailbox access to business requirements. |
-| HRLink | KEEP | Minimal permissions are appropriate; assign named owner. |
-| SignFast | KEEP | File access is appropriately scoped; validate document safeguards and assign named owner. |
+| DocuSharePro | REMOVE | Remove access for all 112 users. The app has too much access, unusual activity and no owner. |
+| PDF Tools Online | REMOVE | Remove access for all 17 users. The app is unused and has too much access. |
+| SchedulePro | RESTRICT | Limit access to free/busy calendar information if possible. Name an owner. |
+| MailMerge Plus | RESTRICT | Allow only approved Marketing staff to use it. Monitor outgoing email and name an owner. |
+| TaskBoard | RESTRICT | Check whether it needs to change calendars. Remove access it does not need and name an owner. |
+| ExportBot | RESTRICT | Name a new owner, replace the secret and limit access to the mailboxes needed for the report. |
+| HRLink | KEEP | It only needs basic profile information. Name an owner. |
+| SignFast | KEEP | It only accesses selected files. Check that documents are protected and name an owner. |
 
 ## Deliverable 3 — The 112 people
 
@@ -64,7 +64,7 @@ Acceptable risk is not zero risk.
 
 ### Approval activity
 
-112 users; 83 weekend approvals. Publisher registered November 18. Automatic activity continues on November 23.
+112 users approved the app, including 83 over the weekend. The publisher registered on November 18. The app was still running automatically on November 23.
 
 | Date | Approvals |
 |---|---:|
@@ -79,11 +79,11 @@ Monday is a partial day.
 
 | Sequence | Action | Rationale |
 |---|---|---|
-| 1. Contain | Revoke all 112 consent grants, block further approvals and verify existing tokens can no longer be used. | Stop further exposure. |
-| 2. Investigate | Run activity reports for all affected accounts, preserve evidence and remediate identified damage. | Determine whether compromise occurred and establish its extent. |
-| 3. Prevent recurrence | Implement consent restrictions, administrative approval and monitoring. | Address the underlying governance failure. |
+| 1. Contain | Remove access for all 112 users, block new approvals and check that existing access tokens no longer work. | Stop the app from accessing more data. |
+| 2. Investigate | Review activity for all 112 accounts, preserve evidence and fix any damage found. | Find out what happened and how much data was affected. |
+| 3. Prevent recurrence | Limit what employees can approve, require IT approval for higher-risk apps and monitor approvals. | Stop the same problem from happening again. |
 
-Suspicious activity warrants containment, but data theft has not been confirmed.
+The activity is suspicious, but we do not know whether any data was stolen.
 
 ## Deliverable 4 — Future approval policy
 
@@ -91,31 +91,31 @@ Suspicious activity warrants containment, but data theft has not been confirmed.
 
 **Response**
 
-1. Employees may only approve applications from verified publishers requesting approved, low-risk permissions.
-2. Applications requesting elevated permissions or coming from unverified publishers require IT Security approval and documented business justification from a named business owner.
-3. All application approvals must be logged and generate alerts for IT Security.
-4. MailMerge Plus will remain operational under administrative approval, with access restricted to authorized Marketing personnel and outbound email activity monitored and audited.
+1. Employees can only approve apps from verified publishers that request approved, low-risk permissions.
+2. Apps that request higher-risk permissions or come from unverified publishers need IT Security approval and a written business reason from a named owner.
+3. Log every app approval and alert IT Security.
+4. Keep MailMerge Plus running with admin approval, limit access to approved Marketing staff, and monitor and audit outgoing email.
 
 ## Bonus — ExportBot
 
 **Question:** ExportBot is built in-house and used every night, which makes it look safe. Why could it be more dangerous than DocuSharePro?
 
-**Response:** ExportBot has access to every company mailbox and operates independently of interactive user authentication. Its former owner may still possess the unchanged application secret, creating a potential insider threat with a company-wide blast radius.
+**Response:** ExportBot can read every company mailbox without anyone signing in. Its former owner may still have the secret, which creates a potential insider threat affecting the entire company.
 
 | Risk factor | DocuSharePro | ExportBot |
 |---|---|---|
 | Access type | Delegated | Application |
 | Mailbox exposure | 112 users | Entire company |
-| Ownership | None | Orphaned |
+| Ownership | None | Owner left |
 | Business necessity | Unknown | Established |
 | Suspicious activity | Observed | None reported |
 
-The owner departed five weeks ago; the secret has remained unchanged since March 2025. No insider misuse has been established.
+The owner left five weeks ago, and the secret has not been changed since March 2025. There is no evidence of insider misuse.
 
 ## Key takeaways
 
-- Verified publishers are not necessarily secure publishers.
-- Legitimate business functions do not justify excessive permissions.
-- Non-human identities require ownership and credential lifecycle management.
-- Risk prioritization must distinguish immediate threats from potential exposure.
-- Security controls should protect the business without unnecessarily disrupting it.
+- A verified publisher does not mean an app is safe.
+- A useful app should not have more access than it needs.
+- Non-human identities need owners, and their credentials need to be managed and rotated.
+- Deal with immediate threats first, without ignoring other serious risks.
+- Protect the business without getting in the way of legitimate work.
