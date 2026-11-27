@@ -3,7 +3,7 @@
 
 **Scenario:** Northwind — November 23, 2026
 
-This is a tabletop exercise. None of the proposed controls have been implemented or tested.
+Tabletop exercise / no controls implemented or tested
 
 ## Scenario overview
 
