@@ -49,14 +49,14 @@ Acceptable risk is not zero risk.
 
 | App | Decision | Reasoning and action |
 |---|---|---|
-| SchedulePro | RESTRICT | Reduce calendar access to free/busy availability if supported; assign named owner. |
 | DocuSharePro | REMOVE | Revoke access due to excessive permissions, suspicious activity and lack of ownership. |
-| MailMerge Plus | RESTRICT | Limit to authorized Marketing personnel, monitor outbound email and assign named owner. |
-| HRLink | KEEP | Minimal permissions are appropriate; assign named owner. |
 | PDF Tools Online | REMOVE | Revoke dormant, excessive permissions for all 17 users. |
-| SignFast | KEEP | File access is appropriately scoped; validate document safeguards and assign named owner. |
+| SchedulePro | RESTRICT | Reduce calendar access to free/busy availability if supported; assign named owner. |
+| MailMerge Plus | RESTRICT | Limit to authorized Marketing personnel, monitor outbound email and assign named owner. |
 | TaskBoard | RESTRICT | Validate calendar write requirements, remove unnecessary permissions and assign named owner. |
 | ExportBot | RESTRICT | Assign new ownership, rotate credentials and reduce mailbox access to business requirements. |
+| HRLink | KEEP | Minimal permissions are appropriate; assign named owner. |
+| SignFast | KEEP | File access is appropriately scoped; validate document safeguards and assign named owner. |
 
 ## Deliverable 3 — The 112 people
 
