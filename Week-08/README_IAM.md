@@ -13,27 +13,16 @@ The identity system can require admin approval, limit user consent to low-risk a
 
 ## Application inventory
 
-| App | Access | Users | Owner |
-|---|---|---:|---|
-| SchedulePro | Profile; calendar read | 64 | Sales Ops |
-| DocuSharePro | All mail read; all files read/write; offline | 112 | None |
-| MailMerge Plus | Send as user; contacts read | 9 | Marketing |
-| HRLink | Basic profile (sign-in) | 118 | HR |
-| PDF Tools Online | All files read/write | 17 | None |
-| SignFast | Selected files read/write | 31 | Legal |
-| TaskBoard | Profile; calendar read/write | 41 | Engineering |
-| ExportBot | All mailboxes read | All mailboxes | J. Patel (left 5 weeks ago) |
-
-| App | Publisher / type | First approved | Last used |
-|---|---|---|---|
-| SchedulePro | Verified / delegated | Mar 2025 | Today |
-| DocuSharePro | Unverified / delegated | Nov 20 | Today (automatic) |
-| MailMerge Plus | Verified / delegated | Jun 2025 | 2 days ago |
-| HRLink | Verified / delegated | Jan 2025 | Today |
-| PDF Tools Online | Unverified / delegated | Mar 2026 | 190 days ago |
-| SignFast | Verified / delegated | Aug 2025 | Yesterday |
-| TaskBoard | Verified / delegated | Oct 2025 | Today |
-| ExportBot | In-house / application | Mar 2025 | Today, 03:00 (nightly) |
+| App | Publisher | Permissions | Type | Users | Approved | Last used | Owner |
+|---|---|---|---|---:|---|---|---|
+| SchedulePro | Verified | Profile; calendar read | Delegated | 64 | Mar 2025 | Today | Sales Ops |
+| DocuSharePro | Unverified | All mail read; all files read/write; offline access | Delegated | 112 | Nov 20 | Today (auto) | None |
+| MailMerge Plus | Verified | Send as user; contacts read | Delegated | 9 | Jun 2025 | 2 days ago | Marketing |
+| HRLink | Verified | Profile (sign-in only) | Delegated | 118 | Jan 2025 | Today | HR |
+| PDF Tools Online | Unverified | All files read/write | Delegated | 17 | Mar 2026 | 190 days ago | None |
+| SignFast | Verified | Selected files read/write | Delegated | 31 | Aug 2025 | Yesterday | Legal |
+| TaskBoard | Verified | Profile; calendar read/write | Delegated | 41 | Oct 2025 | Today | Engineering |
+| ExportBot | In-house | All mailboxes read | Application | All mailboxes | Mar 2025 | Today, 03:00 (nightly) | J. Patel (left 5 weeks ago) |
 
 DocuSharePro's publisher registered on Nov 18, 2026.
 
