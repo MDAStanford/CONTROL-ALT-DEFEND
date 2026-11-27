@@ -9,18 +9,22 @@ This is a tabletop exercise. None of the proposed controls have been implemented
 
 Employees can give apps access to company data without IT approval or monitoring. Management wants to fix this without taking away Marketing's email tool.
 
+The identity system can require admin approval, limit user consent to low-risk apps from verified publishers, remove app access for everyone or selected users, end user sessions and alert on app approvals. Only admins can approve application permissions.
+
 ## Application inventory
 
-| App | Publisher | Permissions | Type | Users | Owner |
-|---|---|---|---|---:|---|
-| SchedulePro | Verified | Profile, calendar read | Delegated | 64 | Sales Ops |
-| DocuSharePro | Unverified | Mail read, files read/write, offline access | Delegated | 112 | None |
-| MailMerge Plus | Verified | Send mail as user, read contacts | Delegated | 9 | Marketing |
-| HRLink | Verified | Basic profile | Delegated | 118 | HR |
-| PDF Tools Online | Unverified | All files read/write | Delegated | 17 | None |
-| SignFast | Verified | Selected files read/write | Delegated | 31 | Legal |
-| TaskBoard | Verified | Profile, calendar read/write | Delegated | 41 | Engineering |
-| ExportBot | In-house | All mailboxes read | Application | All | Departed employee |
+| App | Publisher | Permissions | Type | Users | First approved | Last used | Owner |
+|---|---|---|---|---:|---|---|---|
+| SchedulePro | Verified | Profile, calendar read | Delegated | 64 | Mar 2025 | Today | Sales Ops |
+| DocuSharePro | Unverified | All user mail read, all user files read/write, offline access | Delegated | 112 | Nov 20 | Today (automatic) | None |
+| MailMerge Plus | Verified | Send mail as user, read contacts | Delegated | 9 | Jun 2025 | 2 days ago | Marketing |
+| HRLink | Verified | Basic profile | Delegated | 118 | Jan 2025 | Today | HR |
+| PDF Tools Online | Unverified | All user files read/write | Delegated | 17 | Mar 2026 | 190 days ago | None |
+| SignFast | Verified | Selected files read/write | Delegated | 31 | Aug 2025 | Yesterday | Legal |
+| TaskBoard | Verified | Profile, calendar read/write | Delegated | 41 | Oct 2025 | Today | Engineering |
+| ExportBot | In-house | All mailboxes read | Application | All | Mar 2025 | Today, 03:00 | Owner left |
+
+IT did not approve DocuSharePro or PDF Tools Online. ExportBot builds a nightly clinic-usage report.
 
 ## Deliverable 1 — Triage
 
@@ -30,7 +34,7 @@ Employees can give apps access to company data without IT approval or monitoring
 
 | Priority | App | Rationale |
 |---|---|---|
-| 1 — Immediate | DocuSharePro | 112 users, broad access to mail and files, unusual approval activity and no owner. |
+| 1 — Immediate | DocuSharePro | 112 users, 83 weekend approvals, broad mail and file access, offline access, a new unverified publisher and no owner. |
 | 2 — Urgent | ExportBot | Can read every company mailbox. Its owner left and its secret has never been changed. |
 | 3 — Prompt | PDF Tools Online | Can read and change files, comes from an unverified publisher, has not been used in 190 days and has no known business need. |
 
@@ -52,9 +56,9 @@ Acceptable risk is not zero risk.
 | DocuSharePro | REMOVE | Remove access for all 112 users. The app has too much access, unusual activity and no owner. |
 | PDF Tools Online | REMOVE | Remove access for all 17 users. The app is unused and has too much access. |
 | SchedulePro | RESTRICT | Limit access to free/busy calendar information if possible. Name an owner. |
-| MailMerge Plus | RESTRICT | Allow only approved Marketing staff to use it. Monitor outgoing email and name an owner. |
+| MailMerge Plus | RESTRICT | Allow only approved Marketing staff to use it. Name an owner, monitor outgoing email, and use sending limits and a dedicated mailbox if supported. |
 | TaskBoard | RESTRICT | Check whether it needs to change calendars. Remove access it does not need and name an owner. |
-| ExportBot | RESTRICT | Name a new owner, replace the secret and limit access to the mailboxes needed for the report. |
+| ExportBot | RESTRICT | Name a new owner, replace the secret and limit mailbox access to what the report needs. Test the report and promptly retire the old secret. |
 | HRLink | KEEP | It only needs basic profile information. Name an owner. |
 | SignFast | KEEP | It only accesses selected files. Check that documents are protected and name an owner. |
 
@@ -79,8 +83,8 @@ Monday is a partial day.
 
 | Sequence | Action | Rationale |
 |---|---|---|
-| 1. Contain | Remove access for all 112 users, block new approvals and check that existing access tokens no longer work. | Stop the app from accessing more data. |
-| 2. Investigate | Review activity for all 112 accounts, preserve evidence and fix any damage found. | Find out what happened and how much data was affected. |
+| 1. Contain | Remove access for all 112 users, block new approvals and verify existing tokens cannot access company data. End affected user sessions where necessary. | Stop the app from accessing more data. |
+| 2. Investigate | Review activity for all 112 accounts from November 20 onward, preserve evidence and fix any damage found. | Find out what happened and how much data was affected. |
 | 3. Prevent recurrence | Limit what employees can approve, require IT approval for higher-risk apps and monitor approvals. | Stop the same problem from happening again. |
 
 The activity is suspicious, but we do not know whether any data was stolen.
@@ -91,8 +95,8 @@ The activity is suspicious, but we do not know whether any data was stolen.
 
 **Response**
 
-1. Employees can only approve apps from verified publishers that request approved, low-risk permissions.
-2. Apps that request higher-risk permissions or come from unverified publishers need IT Security approval and a written business reason from a named owner.
+1. Employees can only approve delegated permissions from verified publishers requesting approved, low-risk access.
+2. All application permissions, higher-risk delegated permissions and apps from unverified publishers require IT Security approval and a written business reason from a named owner.
 3. Log every app approval and alert IT Security.
 4. Keep MailMerge Plus running with admin approval, limit access to approved Marketing staff, and monitor and audit outgoing email.
 
@@ -100,7 +104,7 @@ The activity is suspicious, but we do not know whether any data was stolen.
 
 **Question:** ExportBot is built in-house and used every night, which makes it look safe. Why could it be more dangerous than DocuSharePro?
 
-**Response:** ExportBot can read every company mailbox without anyone signing in. Its former owner may still have the secret, which creates a potential insider threat affecting the entire company.
+**Response:** ExportBot can read every company mailbox without anyone signing in or completing multi-factor authentication (MFA). Its former owner may still have the secret, but anyone who obtains it could potentially access company-wide email. This creates a potential insider threat and a much larger mailbox exposure than DocuSharePro.
 
 | Risk factor | DocuSharePro | ExportBot |
 |---|---|---|
