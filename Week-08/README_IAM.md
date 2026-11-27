@@ -13,16 +13,29 @@ The identity system can require admin approval, limit user consent to low-risk a
 
 ## Application inventory
 
-| App | Publisher | Permissions | Type | Users | First approved | Last used | Owner |
-|---|---|---|---|---:|---|---|---|
-| SchedulePro | Verified | Profile, calendar read | Delegated | 64 | Mar 2025 | Today | Sales Ops |
-| DocuSharePro | Unverified (registered Nov 18, 2026) | All user mail read, all user files read/write, offline access | Delegated | 112 | Nov 20 | Today (automatic) | None |
-| MailMerge Plus | Verified | Send mail as user, read contacts | Delegated | 9 | Jun 2025 | 2 days ago | Marketing |
-| HRLink | Verified | Basic profile (sign-in only) | Delegated | 118 | Jan 2025 | Today | HR |
-| PDF Tools Online | Unverified | All user files read/write | Delegated | 17 | Mar 2026 | 190 days ago | None |
-| SignFast | Verified | Selected files read/write | Delegated | 31 | Aug 2025 | Yesterday | Legal |
-| TaskBoard | Verified | Profile, calendar read/write | Delegated | 41 | Oct 2025 | Today | Engineering |
-| ExportBot | In-house | All mailboxes read | Application | All mailboxes | Mar 2025 | Today, 03:00 (nightly) | J. Patel (left 5 weeks ago) |
+| App | Access | Users | Owner |
+|---|---|---:|---|
+| SchedulePro | Profile; calendar read | 64 | Sales Ops |
+| DocuSharePro | All mail read; all files read/write; offline | 112 | None |
+| MailMerge Plus | Send as user; contacts read | 9 | Marketing |
+| HRLink | Basic profile (sign-in) | 118 | HR |
+| PDF Tools Online | All files read/write | 17 | None |
+| SignFast | Selected files read/write | 31 | Legal |
+| TaskBoard | Profile; calendar read/write | 41 | Engineering |
+| ExportBot | All mailboxes read | All mailboxes | J. Patel (left 5 weeks ago) |
+
+| App | Publisher / type | First approved | Last used |
+|---|---|---|---|
+| SchedulePro | Verified / delegated | Mar 2025 | Today |
+| DocuSharePro | Unverified / delegated | Nov 20 | Today (automatic) |
+| MailMerge Plus | Verified / delegated | Jun 2025 | 2 days ago |
+| HRLink | Verified / delegated | Jan 2025 | Today |
+| PDF Tools Online | Unverified / delegated | Mar 2026 | 190 days ago |
+| SignFast | Verified / delegated | Aug 2025 | Yesterday |
+| TaskBoard | Verified / delegated | Oct 2025 | Today |
+| ExportBot | In-house / application | Mar 2025 | Today, 03:00 (nightly) |
+
+DocuSharePro's publisher registered on Nov 18, 2026.
 
 IT did not approve DocuSharePro or PDF Tools Online. ExportBot builds a nightly clinic-usage report.
 
@@ -56,11 +69,11 @@ Acceptable risk is not zero risk.
 | DocuSharePro | REMOVE | Remove access for all 112 users. The app has too much access, unusual activity and no owner. |
 | PDF Tools Online | REMOVE | Remove access for all 17 users. The app has not been used in 190 days and has too much access. |
 | SchedulePro | RESTRICT | Limit calendar access to free/busy information if supported. Confirm a named individual owner within Sales Ops. |
-| MailMerge Plus | RESTRICT | Keep the 9 existing Marketing users working without interruption. Limit access and consent eligibility to authorized Marketing staff, require admin approval, monitor outgoing email, apply sending limits where supported and confirm a named individual owner within Marketing. |
+| MailMerge Plus | RESTRICT | Keep all 9 Marketing users working. Limit access and consent eligibility to authorized Marketing staff; require admin approval, monitor mail, apply sending limits if supported and confirm a named Marketing owner. |
 | TaskBoard | RESTRICT | Check whether calendar write access is needed and remove unnecessary permissions. Confirm a named individual owner within Engineering. |
 | ExportBot | RESTRICT | Name a new owner, replace the secret and limit mailbox access to what the report needs. Test the report and promptly retire the old secret. |
 | HRLink | KEEP | It only needs basic profile information for sign-in. Confirm a named point of contact within HR. |
-| SignFast | KEEP | It only accesses files selected by the user. Verify that protections match the sensitivity of Legal's documents and confirm a named point of contact within Legal. |
+| SignFast | KEEP | It only accesses files selected by the user. Check protections for sensitive documents and confirm a named Legal contact. |
 
 ## Deliverable 3 — The 112 people
 
