@@ -1,7 +1,7 @@
 # IAM: Who Approved This App?
 *Control + Alt + Defend | Application Consent Governance*
 
-**Scenario:** Northwind — November 23, 2026
+**Scenario:** Northwind — November 23, 2026, mid-afternoon
 
 Tabletop exercise / no controls implemented or tested
 
@@ -16,13 +16,13 @@ The identity system can require admin approval, limit user consent to low-risk a
 | App | Publisher | Permissions | Type | Users | First approved | Last used | Owner |
 |---|---|---|---|---:|---|---|---|
 | SchedulePro | Verified | Profile, calendar read | Delegated | 64 | Mar 2025 | Today | Sales Ops |
-| DocuSharePro | Unverified | All user mail read, all user files read/write, offline access | Delegated | 112 | Nov 20 | Today (automatic) | None |
+| DocuSharePro | Unverified (registered Nov 18, 2026) | All user mail read, all user files read/write, offline access | Delegated | 112 | Nov 20 | Today (automatic) | None |
 | MailMerge Plus | Verified | Send mail as user, read contacts | Delegated | 9 | Jun 2025 | 2 days ago | Marketing |
-| HRLink | Verified | Basic profile | Delegated | 118 | Jan 2025 | Today | HR |
+| HRLink | Verified | Basic profile (sign-in only) | Delegated | 118 | Jan 2025 | Today | HR |
 | PDF Tools Online | Unverified | All user files read/write | Delegated | 17 | Mar 2026 | 190 days ago | None |
 | SignFast | Verified | Selected files read/write | Delegated | 31 | Aug 2025 | Yesterday | Legal |
 | TaskBoard | Verified | Profile, calendar read/write | Delegated | 41 | Oct 2025 | Today | Engineering |
-| ExportBot | In-house | All mailboxes read | Application | All | Mar 2025 | Today, 03:00 | Owner left |
+| ExportBot | In-house | All mailboxes read | Application | All mailboxes | Mar 2025 | Today, 03:00 (nightly) | J. Patel (left 5 weeks ago) |
 
 IT did not approve DocuSharePro or PDF Tools Online. ExportBot builds a nightly clinic-usage report.
 
@@ -54,13 +54,13 @@ Acceptable risk is not zero risk.
 | App | Decision | Reasoning and action |
 |---|---|---|
 | DocuSharePro | REMOVE | Remove access for all 112 users. The app has too much access, unusual activity and no owner. |
-| PDF Tools Online | REMOVE | Remove access for all 17 users. The app is unused and has too much access. |
-| SchedulePro | RESTRICT | Limit access to free/busy calendar information if possible. Name an owner. |
-| MailMerge Plus | RESTRICT | Allow only approved Marketing staff to use it. Name an owner, monitor outgoing email, and use sending limits and a dedicated mailbox if supported. |
-| TaskBoard | RESTRICT | Check whether it needs to change calendars. Remove access it does not need and name an owner. |
+| PDF Tools Online | REMOVE | Remove access for all 17 users. The app has not been used in 190 days and has too much access. |
+| SchedulePro | RESTRICT | Limit calendar access to free/busy information if supported. Confirm a named individual owner within Sales Ops. |
+| MailMerge Plus | RESTRICT | Keep the 9 existing Marketing users working without interruption. Limit access and consent eligibility to authorized Marketing staff, require admin approval, monitor outgoing email, apply sending limits where supported and confirm a named individual owner within Marketing. |
+| TaskBoard | RESTRICT | Check whether calendar write access is needed and remove unnecessary permissions. Confirm a named individual owner within Engineering. |
 | ExportBot | RESTRICT | Name a new owner, replace the secret and limit mailbox access to what the report needs. Test the report and promptly retire the old secret. |
-| HRLink | KEEP | It only needs basic profile information. Name an owner. |
-| SignFast | KEEP | It only accesses selected files. Check that documents are protected and name an owner. |
+| HRLink | KEEP | It only needs basic profile information for sign-in. Confirm a named point of contact within HR. |
+| SignFast | KEEP | It only accesses files selected by the user. Verify that protections match the sensitivity of Legal's documents and confirm a named point of contact within Legal. |
 
 ## Deliverable 3 — The 112 people
 
@@ -68,14 +68,15 @@ Acceptable risk is not zero risk.
 
 ### Approval activity
 
-112 users approved the app, including 83 over the weekend. The publisher registered on November 18. The app was still running automatically on November 23.
+112 users approved the app, including 83 over the weekend. The publisher registered on November 18, 2026. The app was still accessing accounts automatically on November 23.
 
 | Date | Approvals |
 |---|---:|
-| Fri 20 | 6 |
-| Sat 21 | 31 |
-| Sun 22 | 52 |
-| Mon 23 | 23 |
+| Fri Nov 20 | 6 |
+| Sat Nov 21 | 31 |
+| Sun Nov 22 | 52 |
+| Mon Nov 23 | 23 |
+| **Total** | **112** |
 
 Monday is a partial day.
 
@@ -96,9 +97,9 @@ The activity is suspicious, but we do not know whether any data was stolen.
 **Response**
 
 1. Employees can only approve delegated permissions from verified publishers requesting approved, low-risk access.
-2. All application permissions, higher-risk delegated permissions and apps from unverified publishers require IT Security approval and a written business reason from a named owner.
+2. All application permissions, higher-risk delegated permissions and apps from unverified publishers require IT Security admin approval and a written business reason from a named owner.
 3. Log every app approval and alert IT Security.
-4. Keep MailMerge Plus running with admin approval, limit access to approved Marketing staff, and monitor and audit outgoing email.
+4. Keep MailMerge Plus running for its 9 existing Marketing users under admin approval without repeated approval requests, limit access to authorized Marketing staff, and monitor outgoing email with sending limits where supported.
 
 ## Bonus — ExportBot
 
@@ -114,7 +115,7 @@ The activity is suspicious, but we do not know whether any data was stolen.
 | Business necessity | Unknown | Established |
 | Suspicious activity | Observed | None reported |
 
-The owner left five weeks ago, and the secret has not been changed since March 2025. There is no evidence of insider misuse.
+The owner left five weeks ago, and the secret was created in March 2025 and has never been changed. No insider misuse has been reported.
 
 ## Key takeaways
 
