@@ -12,7 +12,8 @@ Employees can authorize third-party applications without IT review or monitoring
 ### Current state
 
 ```mermaid
-flowchart TD
+%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
+flowchart LR
  A[Employee approves app] --> B[Third-party application]
  B --> C[Company email: read or send]
  B --> D[Company files: read or modify]
@@ -81,6 +82,7 @@ Acceptable risk is not zero risk.
 112 users; 83 weekend approvals. Publisher registered November 18. Automatic activity continues on November 23.
 
 ```mermaid
+%%{init: {'xyChart': {'width': 420, 'height': 220}, 'themeVariables': {'fontSize': '12px'}}}%%
 xychart-beta
  title "DocuSharePro approvals"
  x-axis ["Fri 20", "Sat 21", "Sun 22", "Mon 23"]
@@ -99,6 +101,7 @@ Monday is a partial day.
 | 3. Prevent recurrence | Implement consent restrictions, administrative approval and monitoring. | Address the underlying governance failure. |
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart LR
  A[Contain] --> B[Investigate and remediate] --> C[Prevent recurrence]
 ```
@@ -119,7 +122,8 @@ Suspicious activity warrants containment, but data theft has not been confirmed.
 ### Proposed future state
 
 ```mermaid
-flowchart TD
+%%{init: {'flowchart': {'nodeSpacing': 15, 'rankSpacing': 20, 'padding': 5}, 'themeVariables': {'fontSize': '12px'}}}%%
+flowchart LR
  A[Application consent request] --> B{Verified publisher and approved low-risk permissions?}
  B -->|Yes| C[User consent permitted]
  B -->|No| D[IT Security review]
